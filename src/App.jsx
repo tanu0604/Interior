@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Gallery from "./components/library/Gallery";
 import CategoryPage from "./components/library/CategoryPage";
 import WhatsappForm from "./components/form/WhatsappForm";
+import PriceCalculator from "./components/PriceCalculator/PriceCalculator";
 const App = () => {
   return (
     <Router>
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/gallery" element={<Gallery />}></Route>
         <Route path="/gallery/:categoryId" element={<CategoryPage />} />
         <Route path="/form" element={<WhatsappForm />} />
+        <Route path="/calculator" element={<PriceCalculator/>}></Route>
       </Routes>
 
       {/* Footer stays visible on all pages */}
