@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import About from "../about/About";
+import Gallery from "../library/Gallery";
 
 export default function Home() {
   useEffect(() => {
@@ -57,6 +58,10 @@ export default function Home() {
 
       <div data-aos="fade-up">
         <About />
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="200">
+        <Gallery />
       </div>
 
     </>
