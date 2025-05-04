@@ -6,8 +6,8 @@ import About from "./components/about/About";
 // import PriceCalculator from "./components/PriceCalculator/PriceCalculator";
 // import WhatsAppForm from "./components/form/WhatsAppForm";
 import Footer from "./components/Footer/Footer";
-// import Gallery from "./components/library/Gallery";
-// import CategoryPage from "./components/library/CategoryPage";
+import Gallery from "./components/library/Gallery";
+import CategoryPage from "./components/library/CategoryPage";
 const App = () => {
   return (
     <Router>
@@ -17,7 +17,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About/>}></Route>
-
+        <Route path="/gallery" element={<Gallery/>}></Route>
+        <Route path="/gallery/:categoryId" element={<CategoryPage />} />
       </Routes>
 
       {/* Footer stays visible on all pages */}
