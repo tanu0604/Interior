@@ -65,6 +65,11 @@ export default function Home() {
         <About />
       </div>
 
+      
+      <div data-aos="fade-up" data-aos-delay="200">
+        <Gallery />
+      </div>
+
          <div data-aos="fade-up" data-aos-delay="200">
         <PriceCalculator />
       </div>
@@ -73,10 +78,6 @@ export default function Home() {
         <WhatsappForm />
       </div>
       
-      <div data-aos="fade-up" data-aos-delay="200">
-        <Gallery />
-      </div>
-
    
     </>
   );
