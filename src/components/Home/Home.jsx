@@ -5,7 +5,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import About from "../about/About";
 import Gallery from "../library/Gallery";
-
+import PriceCalculator from "../PriceCalculator/PriceCalculator";
+import WhatsappForm from "../form/WhatsappForm";
 export default function Home() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -13,7 +14,10 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative w-full min-h-[500px] lg:min-h-[600px] overflow-hidden" id="home">
+      <section
+        className="relative w-full min-h-[500px] lg:min-h-[600px] overflow-hidden"
+        id="home"
+      >
         {/* Background with gradient overlay */}
         <div className="absolute inset-0">
           <img
@@ -33,7 +37,8 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              Welcome to <span className="text-gray-200">Interior Design Service</span>
+              Welcome to{" "}
+              <span className="text-gray-200">Interior Design Service</span>
             </motion.h1>
             <p className="text-lg md:text-xl text-gray-300 italic">
               Transform your space with elegance and creativity.
@@ -64,6 +69,13 @@ export default function Home() {
         <Gallery />
       </div>
 
+      <div data-aos="fade-up" data-aos-delay="200">
+        <PriceCalculator />
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="200">
+        <WhatsappForm />
+      </div>
     </>
   );
 }
