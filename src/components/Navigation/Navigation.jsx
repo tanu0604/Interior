@@ -8,8 +8,7 @@ const navItems = [
   { name: "Price Calculator", href: "/calculator" },
   { name: "Form", href: "/form" },
   { name: "Gallery", href: "/gallery" },
-  { name: "How It Works", href: "/working" },
-  { name: "Services", href: "/services" },
+
 ];
 
 export default function Navigation() {
