@@ -3,6 +3,7 @@ import headingImg from "../../assets/hero.jpg";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import About from "../about/About";
 
 export default function Home() {
   useEffect(() => {
@@ -53,6 +54,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div data-aos="fade-up">
+        <About />
+      </div>
+
     </>
   );
 }
