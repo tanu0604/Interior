@@ -22,11 +22,11 @@ export default function About() {
   };
 
   return (
-    <section className="py-20 bg-black text-gray-200" id="about">
+    <section className="py-20 bg-[#FAF9F6]" id="about">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
         {/* Heading */}
         <motion.h1
-          className="text-4xl md:text-5xl font-semibold text-white text-center font-serif mb-12 tracking-wide"
+          className="text-4xl md:text-5xl font-semibold text-gray-800 text-center font-serif mb-12 tracking-wide"
           initial="hidden"
           whileInView="visible"
           variants={textVariants}
@@ -53,17 +53,17 @@ export default function About() {
 
           {/* Right - Text */}
           <motion.div
-            className="w-full lg:w-1/2 text-lg leading-relaxed space-y-6"
+            className="w-full lg:w-1/2 text-gray-800 text-lg leading-relaxed space-y-6"
             initial="hidden"
             whileInView="visible"
             variants={textVariants}
             viewport={{ once: true }}
           >
-            <p className="italic text-gray-400 text-xl">
+            <p className="italic text-gray-600 text-xl">
               "Designing spaces that tell your story."
             </p>
             <p>
-              At <span className="font-semibold text-white">Interior Design Service</span>,
+              At <span className="font-semibold">Interior Design Service</span>,
               we craft timeless interiors that blend functionality with
               aesthetics. Whether it's your home or office, we believe every
               space should reflect elegance, comfort, and personality.
@@ -74,12 +74,11 @@ export default function About() {
               working environment with a touch of sophistication.
             </p>
 
-            {/* CTA */}
             <a
               href="https://wa.me/9297820850"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-white text-black py-3 px-8 rounded-full text-lg font-medium shadow-md hover:bg-gray-200 transition-all duration-300"
+              className="inline-block bg-gray-900 text-white py-3 px-8 rounded-full text-lg font-medium shadow hover:bg-gray-700 transition duration-300"
             >
               Connect with Us
             </a>
