@@ -1,13 +1,100 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useAnimationControls, useInView } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import livingRoom from "../../assets/library/livingroom/1.jpg";
-import bedroom from "../../assets/library/bedroom/1.jpg";
-import kitchen from "../../assets/library/kitchen/1.jpg";
-import dining from "../../assets/library/dining/1.jpg";
-import office from "../../assets/library/office/1.jpg";
-import bathroom from "../../assets/library/bathroom/1.jpg";
-import furniture from "../../assets/library/furniture/1.jpg";
+
+//for living room
+import livingRoom1 from "../../assets/library/livingroom/1.jpg";
+import livingRoom2 from "../../assets/library/livingroom/2.jpg";
+import livingRoom3 from "../../assets/library/livingroom/3.jpg";
+import livingRoom4 from "../../assets/library/livingroom/4.jpg";
+import livingRoom5 from "../../assets/library/livingroom/5.jpg";
+import livingRoom6 from "../../assets/library/livingroom/6.jpg";
+import livingRoom7 from "../../assets/library/livingroom/7.jpg";
+import livingRoom8 from "../../assets/library/livingroom/8.jpg";
+import livingRoom9 from "../../assets/library/livingroom/9.jpg";
+import livingRoom10 from "../../assets/library/livingroom/10.jpg";
+import livingRoom11 from "../../assets/library/livingroom/11.jpg";
+import livingRoom12 from "../../assets/library/livingroom/12.jpg";
+
+//for bedroom
+import bedroom1 from "../../assets/library/bedroom/1.jpg";
+import bedroom2 from "../../assets/library/bedroom/2.jpg";
+import bedroom3 from "../../assets/library/bedroom/3.jpg";
+import bedroom4 from "../../assets/library/bedroom/4.jpg";
+import bedroom5 from "../../assets/library/bedroom/5.jpg";
+import bedroom6 from "../../assets/library/bedroom/6.jpg";
+import bedroom7 from "../../assets/library/bedroom/7.jpg";
+import bedroom8 from "../../assets/library/bedroom/8.jpg";
+import bedroom9 from "../../assets/library/bedroom/9.jpg";
+import bedroom10 from "../../assets/library/bedroom/10.jpg";
+import bedroom11 from "../../assets/library/bedroom/11.jpg";
+import bedroom12 from "../../assets/library/bedroom/12.jpg";
+
+//images of kitchen space
+import kitchen1 from "../../assets/library/kitchen/1.jpg";
+import kitchen2 from "../../assets/library/kitchen/2.jpg";
+import kitchen3 from "../../assets/library/kitchen/3.jpg";
+import kitchen4 from "../../assets/library/kitchen/4.jpg";
+import kitchen5 from "../../assets/library/kitchen/5.jpg";
+import kitchen6 from "../../assets/library/kitchen/6.jpg";
+import kitchen7 from "../../assets/library/kitchen/7.jpg";
+import kitchen8 from "../../assets/library/kitchen/8.jpg";
+import kitchen9 from "../../assets/library/kitchen/9.jpg";
+import kitchen10 from "../../assets/library/kitchen/10.jpg";
+import kitchen11 from "../../assets/library/kitchen/11.jpg";
+import kitchen12 from "../../assets/library/kitchen/12.jpg";
+
+//image of dining room
+import dining1 from "../../assets/library/dining/1.jpg";
+import dining2 from "../../assets/library/dining/2.jpg";
+import dining3 from "../../assets/library/dining/3.jpg";
+import dining4 from "../../assets/library/dining/4.jpg";
+import dining5 from "../../assets/library/dining/5.jpg";
+import dining6 from "../../assets/library/dining/6.jpg";
+import dining7 from "../../assets/library/dining/7.jpg";
+import dining8 from "../../assets/library/dining/8.jpg";
+import dining9 from "../../assets/library/dining/9.jpg";
+
+//images of office interiors
+import office1 from "../../assets/library/office/1.jpg";
+import office2 from "../../assets/library/office/2.jpg";
+import office3 from "../../assets/library/office/3.jpg";
+import office4 from "../../assets/library/office/4.jpg";
+import office5 from "../../assets/library/office/5.jpg";
+import office6 from "../../assets/library/office/6.jpg";
+
+//images of bathroom interiors
+import bathroom1 from "../../assets/library/bathroom/1.jpg";
+import bathroom2 from "../../assets/library/bathroom/2.jpg";
+import bathroom3 from "../../assets/library/bathroom/3.jpg";
+import bathroom4 from "../../assets/library/bathroom/4.jpg";
+import bathroom5 from "../../assets/library/bathroom/5.jpg";
+import bathroom6 from "../../assets/library/bathroom/6.jpg";
+
+//furniture and decor images
+import furniture1 from "../../assets/library/furniture/1.jpg";
+import furniture2 from "../../assets/library/furniture/2.jpg";
+import furniture3 from "../../assets/library/furniture/3.jpg";
+import furniture4 from "../../assets/library/furniture/4.jpg";
+import furniture5 from "../../assets/library/furniture/5.jpg";
+import furniture6 from "../../assets/library/furniture/6.jpg";
+import furniture7 from "../../assets/library/furniture/7.jpg";
+import furniture8 from "../../assets/library/furniture/8.jpg";
+import furniture9 from "../../assets/library/furniture/9.jpg";
+
+//for puja room
+import puja1 from "../../assets/library/puja/1.jpg";
+import puja2 from "../../assets/library/puja/2.jpg";
+import puja3 from "../../assets/library/puja/3.jpg";
+import puja4 from "../../assets/library/puja/4.jpg";
+import puja5 from "../../assets/library/puja/5.jpg";
+import puja6 from "../../assets/library/puja/6.jpg";
+import puja7 from "../../assets/library/puja/7.jpg";
+import puja8 from "../../assets/library/puja/8.jpg";
+import puja9 from "../../assets/library/puja/9.jpg";
+import puja10 from "../../assets/library/puja/10.jpg";
+import puja11 from "../../assets/library/puja/11.jpg";
+import puja12 from "../../assets/library/puja/12.jpg";
 import { useNavigate } from "react-router-dom";
 
 export const categories = [
@@ -16,53 +103,54 @@ export const categories = [
     title: "Living Room Designs",
     tags: ["Modern", "Minimalist", "Traditional", "Boho"],
     images: [
-      livingRoom,
-      livingRoom,
-      livingRoom,
-      livingRoom,
-      livingRoom,
-      livingRoom,
-      livingRoom,
-      livingRoom,
-      livingRoom,
-      livingRoom,
-    ], // Updated to array of images
+      livingRoom1,livingRoom2,livingRoom3,livingRoom4,livingRoom5,livingRoom6,livingRoom7,livingRoom8,livingRoom9,livingRoom10,livingRoom11,livingRoom12,
+    ], 
   },
   {
     id: 2,
     title: "Bedroom Interiors",
     tags: ["Cozy setups", "Luxury bedrooms", "Kids' rooms"],
-    images: [bedroom, bedroom, bedroom, bedroom, bedroom, bedroom, bedroom], // Updated to array of images
+    images: [
+      bedroom1, bedroom2, bedroom3, bedroom4, bedroom5, bedroom6, bedroom7, bedroom8, bedroom9, bedroom10, bedroom11, bedroom12,
+    ],
   },
   {
     id: 3,
     title: "Kitchen Spaces",
     tags: ["Modular kitchens", "Open kitchen concepts"],
-    images: [kitchen, kitchen, kitchen, kitchen, kitchen], // Updated to array of images
+    images: [kitchen1, kitchen2, kitchen3, kitchen4, kitchen5,kitchen6,kitchen7,kitchen8,kitchen9,kitchen10,kitchen11,kitchen12], 
   },
   {
     id: 4,
     title: "Dining Spaces",
     tags: ["Modular kitchens", "Open kitchen concepts"],
-    images: [dining, dining, dining, dining, dining], // Updated to array of images
+    images: [dining1, dining2, dining3, dining4, dining5,dining6, dining7, dining8, dining9], 
   },
   {
     id: 5,
-    title: "Office Interiors",
-    tags: ["Work-from-home setups", "Corporate office designs"],
-    images: [office, office, office, office], // Updated to array of images
+    title: "Puja Room",
+    tags: ["Traditional Decor", "Spiritual Vibes"],
+    images: [
+      puja1, puja2,puja3,puja4, puja5,puja6, puja7, puja8, puja9,puja10,puja11,puja12,
+    ], 
   },
   {
     id: 6,
-    title: "Bathroom & Spa Interiors",
-    tags: ["Luxury baths", "Wellness spaces"],
-    images: [bathroom, bathroom, bathroom, bathroom, bathroom], // Updated to array of images
+    title: "Office Interiors",
+    tags: ["Work-from-home setups", "Corporate office designs"],
+    images: [office1, office2, office3, office4, office5, office6], // Updated to array of images
   },
   {
     id: 7,
+    title: "Bathroom & Spa Interiors",
+    tags: ["Luxury baths", "Wellness spaces"],
+    images: [bathroom1, bathroom2, bathroom3, bathroom4, bathroom5,bathroom6], // Updated to array of images
+  },
+  {
+    id: 8,
     title: "Custom Furniture & Decor",
     tags: ["Unique furniture pieces", "Handmade designs"],
-    images: [furniture, furniture, furniture, furniture], // Updated to array of images
+    images: [furniture1, furniture2, furniture3, furniture4,furniture5,furniture6,furniture7,furniture8,furniture9], // Updated to array of images
   },
 ];
 
@@ -149,11 +237,18 @@ export default function Gallery() {
               transition={{ duration: 0.2 }}
             >
               <div className="relative h-[400px] rounded-xl overflow-hidden">
-                <img
-                  src={category.images[0]} // Display only the first image initially
-                  alt={category.title}
-                  className="object-cover w-full h-full"
-                />
+                <div className="w-full h-full flex overflow-x-auto gap-2 scroll-smooth scrollbar-hide">
+                  {category.images
+                    .slice(0, visibleImages)
+                    .map((image, imgIdx) => (
+                      <img
+                        key={imgIdx}
+                        src={image}
+                        alt={`${category.title} ${imgIdx + 1}`}
+                        className="object-cover w-full h-full flex-shrink-0 rounded-xl"
+                      />
+                    ))}
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 opacity-100 translate-y-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:opacity-100 group-focus-within:translate-y-0 group-active:opacity-100 group-active:translate-y-0">
                   <h3 className="text-xl font-bold text-white mb-2">
