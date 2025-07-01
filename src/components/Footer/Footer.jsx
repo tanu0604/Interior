@@ -8,7 +8,7 @@ export default function Footer() {
         
         {/* Company Info */}
         <div>
-          <h2 className="text-2xl font-semibold text-white tracking-wide">InteriorDesign</h2>
+          <h2 className="text-2xl font-semibold text-white tracking-wide">LLuxe Living</h2>
           <p className="mt-3 text-sm text-gray-400">
             Creating spaces that reflect your style and personality.
           </p>
