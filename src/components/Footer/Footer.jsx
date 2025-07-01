@@ -59,10 +59,16 @@ export default function Footer() {
           <h3 className="text-lg font-medium text-white">Contact</h3>
           <div className="mt-4 text-sm space-y-2 text-gray-400">
             <p className="flex items-center gap-2">
-              <Phone size={18} /> +91 98765 43210
+              <Phone size={18} /> +918420906352
+            </p>
+             <p className="flex items-center gap-2">
+              <Phone size={18} /> +919558214868
+            </p>
+             <p className="flex items-center gap-2">
+              <Phone size={18} /> +917439186072
             </p>
             <p className="flex items-center gap-2">
-              <Mail size={18} /> contact@interiordesign.com
+              <Mail size={18} /> saleslluxeliving@gmail.com
             </p>
           </div>
 
