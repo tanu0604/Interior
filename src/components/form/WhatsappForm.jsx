@@ -11,7 +11,7 @@ const WhatsappForm = () => {
   const [customizations, setCustomizations] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const whatsappNumber = "+919297820850";
+  const whatsappNumber = "+918420906352";
   
   const customizationOptions = [
     "Modular Kitchen",
