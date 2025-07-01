@@ -1,8 +1,9 @@
 import React from "react";
-import { motion } from "framer-motion";
-import aboutImg from "../../assets/AboutImg.jpg";
+import { motion } from "framer-motion"; // Animation library for smooth transitions
+import aboutImg from "../../assets/AboutImg.jpg"; // Local image for About section
 
 export default function About() {
+  // Animation variant for fading and sliding text upward
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -12,6 +13,7 @@ export default function About() {
     },
   };
 
+  // Animation variant for fading and sliding image from left
   const imageVariants = {
     hidden: { opacity: 0, x: -50 },
     visible: {
@@ -22,9 +24,11 @@ export default function About() {
   };
 
   return (
+    // Main section wrapper with padding and background color
     <section className="py-20 bg-[#FAF9F6]" id="about">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
-        {/* Heading */}
+        
+        {/* Section Heading with animation */}
         <motion.h1
           className="text-4xl md:text-5xl font-semibold text-gray-800 text-center font-serif mb-12 tracking-wide"
           initial="hidden"
@@ -35,8 +39,10 @@ export default function About() {
           About Us
         </motion.h1>
 
+        {/* Flex container: switches between column (mobile) and row (desktop) */}
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Left - Image */}
+          
+          {/* Left Side: Image with animation */}
           <motion.div
             className="w-full lg:w-1/2 overflow-hidden rounded-3xl shadow-xl"
             initial="hidden"
@@ -51,7 +57,7 @@ export default function About() {
             />
           </motion.div>
 
-          {/* Right - Text */}
+          {/* Right Side: Text content with animation */}
           <motion.div
             className="w-full lg:w-1/2 text-gray-800 text-lg leading-relaxed space-y-6"
             initial="hidden"
@@ -59,23 +65,29 @@ export default function About() {
             variants={textVariants}
             viewport={{ once: true }}
           >
+            {/* Tagline */}
             <p className="italic text-gray-600 text-xl">
               "Designing spaces that tell your story."
             </p>
+
+            {/* Intro paragraph */}
             <p>
               At <span className="font-semibold">Interior Design Service</span>,
               we craft timeless interiors that blend functionality with
               aesthetics. Whether it's your home or office, we believe every
               space should reflect elegance, comfort, and personality.
             </p>
+
+            {/* Service description */}
             <p>
               Our expert designers curate personalized solutions, transforming
               ideas into breathtaking realities. Let us elevate your living and
               working environment with a touch of sophistication.
             </p>
 
+            {/* WhatsApp contact button */}
             <a
-              href="https://wa.me/9297820850"
+              href="https://wa.me/+918420906352"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gray-900 text-white py-3 px-8 rounded-full text-lg font-medium shadow hover:bg-gray-700 transition duration-300"
