@@ -49,7 +49,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <a
-                href="https://wa.me/+91 8420906352"
+                href="https://wa.me/+918420906352"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-black font-medium rounded-full text-lg px-10 py-3 shadow-md hover:shadow-xl hover:bg-gray-100 transition-all duration-300 inline-block"
