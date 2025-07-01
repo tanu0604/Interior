@@ -72,7 +72,7 @@ export default function About() {
 
             {/* Intro paragraph */}
             <p>
-              At <span className="font-semibold">Interior Design Service</span>,
+              At <span className="font-semibold">LLuxe Living</span>,
               we craft timeless interiors that blend functionality with
               aesthetics. Whether it's your home or office, we believe every
               space should reflect elegance, comfort, and personality.
