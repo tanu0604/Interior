@@ -19,7 +19,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex justify-between items-center h-16">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-white tracking-wide">
-          Lluxe<span className="text-gray-300">Living</span>
+          LLuxe<span className="text-gray-300">Living</span>
         </Link>
 
         {/* Desktop Navigation */}
