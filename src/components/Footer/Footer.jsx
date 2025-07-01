@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import footerLogo from "../../assets/navImg.png";
+import footerLogo from "../../assets/logo.jpg";
 import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 
 export default function Footer() {
@@ -12,7 +12,7 @@ export default function Footer() {
           <img
             src={footerLogo}
             alt="LLuxe Living"
-            className="w-28 h-auto object-contain"
+            className="w-20 h-auto object-contain rounded-full"
           />
           <Link
             to="/"
