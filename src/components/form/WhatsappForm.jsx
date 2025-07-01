@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // For animation effects
 
+// WhatsappForm component - collects project details and redirects to WhatsApp with a prefilled message
 const WhatsappForm = () => {
+  // State variables to store form inputs
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -11,8 +13,10 @@ const WhatsappForm = () => {
   const [customizations, setCustomizations] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // WhatsApp number to send form data to
   const whatsappNumber = "+918420906352";
-  
+
+  // Options available for customization
   const customizationOptions = [
     "Modular Kitchen",
     "False Ceiling",
@@ -21,10 +25,12 @@ const WhatsappForm = () => {
     "Wooden Flooring",
   ];
 
+  // Handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault(); // Prevent default form submission
+    setIsSubmitting(true); // Disable button while processing
 
+    // Format message for WhatsApp
     const message = `
     Hello,
 
@@ -42,14 +48,16 @@ const WhatsappForm = () => {
 
     Thank you.
   `;
-  
+
+    // Encode message and redirect to WhatsApp chat
     const encodedMessage = encodeURIComponent(message.trim());
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
     window.location.href = whatsappUrl;
-    setIsSubmitting(false);
+
+    setIsSubmitting(false); // Reset button state
   };
 
+  // Toggle selection for customization options
   const toggleCustomization = (option) => {
     setCustomizations((prev) =>
       prev.includes(option)
@@ -58,6 +66,7 @@ const WhatsappForm = () => {
     );
   };
 
+  // Animation config for heading text
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -70,6 +79,8 @@ const WhatsappForm = () => {
   return (
     <section className="py-16 bg-gray-100" id="whatsappform">
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+        
+        {/* Animated Section Heading */}
         <motion.h1
           className="text-4xl md:text-5xl font-semibold text-gray-900 text-center font-serif mb-10"
           initial="hidden"
@@ -80,8 +91,11 @@ const WhatsappForm = () => {
           Project Inquiry Form
         </motion.h1>
 
+        {/* Form Container */}
         <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-xl text-gray-800">
           <form onSubmit={handleSubmit} className="space-y-6">
+            
+            {/* Full Name Input */}
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                 Full Name
@@ -96,6 +110,7 @@ const WhatsappForm = () => {
               />
             </div>
 
+            {/* Email Input */}
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Email Address
@@ -110,6 +125,7 @@ const WhatsappForm = () => {
               />
             </div>
 
+            {/* Phone Input */}
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                 Phone Number
@@ -124,6 +140,7 @@ const WhatsappForm = () => {
               />
             </div>
 
+            {/* Area Input */}
             <div>
               <label htmlFor="area" className="block text-sm font-medium text-gray-700">
                 Area (in sq. ft.)
@@ -140,6 +157,7 @@ const WhatsappForm = () => {
               />
             </div>
 
+            {/* BHK Dropdown */}
             <div>
               <label htmlFor="bhk" className="block text-sm font-medium text-gray-700">
                 Select BHK Type
@@ -157,6 +175,7 @@ const WhatsappForm = () => {
               </select>
             </div>
 
+            {/* Finish Dropdown */}
             <div>
               <label htmlFor="finish" className="block text-sm font-medium text-gray-700">
                 Select Finish Type
@@ -173,6 +192,7 @@ const WhatsappForm = () => {
               </select>
             </div>
 
+            {/* Customization Checkboxes */}
             <div>
               <label className="block text-sm font-medium text-gray-700">
                 Select Customizations
@@ -192,6 +212,7 @@ const WhatsappForm = () => {
               </div>
             </div>
 
+            {/* Submit Button */}
             <div className="text-center">
               <button
                 type="submit"
