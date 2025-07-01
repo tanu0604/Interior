@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 grid md:grid-cols-3 gap-10">
         
         {/* Company Info */}
-        <div className="flex items-center space-x-4">
+        <div className="flex flex-col items-center space-x-4">
           <img
             src={footerLogo}
             alt="LLuxe Living"
