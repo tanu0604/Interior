@@ -45,7 +45,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               Welcome to{" "}
-              <span className="text-gray-200">Interior Design Service</span>
+              <span className="text-gray-200">LLuxe Living</span>
             </motion.h1>
 
             {/* Subheading */}
